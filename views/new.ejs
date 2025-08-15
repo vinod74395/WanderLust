@@ -1,0 +1,81 @@
+<% layout("/layouts/boilerplate")%>
+<div class="row mt-3">
+<div class="col-8 offset-2">
+  <!-- <br><br> -->
+ <h3>Create a New Listing</h3>
+<form method="POST" action="/listings" class="needs-validation" novalidate enctype="multipart/form-data">
+  <div class="mb-3">
+  <label for="title" class="form-label">Title</label>
+  <input name="listing[title]"
+  placeholder="add a title"
+   type="text" 
+   class="form-control"
+   required
+   />
+  <div class="valid-feedback">your title was good</div>
+</div>
+<div class="mb-3">
+<label for="description" class="form-label">description</label>
+  <textarea
+    name="listing[description]"
+    placeholder="enter description"
+    class="form-control"
+    required
+  ></textarea>
+
+<div class="invalid-feedback">write short description</div>
+</div>
+<div class="mb-3">
+<label for="image" class="form-label">Upload Image</label>
+  <input
+    name="listing[image]"
+    type="file"
+    class="form-control"
+  />required</div>
+
+<div class="row">
+<div class="mb-3 col-md-4">
+  <label for="price" class="form-label">Price</label>
+  <input name="listing[price]"
+  type="number"
+   placeholder="1200"
+  class="form-control" 
+    required
+    />
+
+  <div class="invalid-feedback">please enter valid price!</div>
+</div>
+
+<div class="mb-3 col-md-8">
+  <label for="country" class="form-label">Country</label>
+  <input name="listing[country]" 
+  placeholder="india"
+   type="text"
+   class="form-control"
+   required />
+   <div class="invalid-feedback">enter your country</div>
+
+</div>
+</div>
+
+ <div class="mb-3">
+  <label for="location" class="form-label">Location</label>
+  <input
+    name="listing[location]"
+    placeholder="Andhra Pradesh"
+    type="text"
+    class="form-control"
+    required
+  />
+  <div class="invalid-feedback">give your current location</div>
+
+  </div>
+  <button class="btn btn-dark add-btn">Add</button>
+  <script src="/js/script.js"></script>
+
+   </form>
+ 
+   </div> 
+   </div>
+
+
